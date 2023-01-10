@@ -43,8 +43,9 @@ function Header() {
             {!session ? signIn : signOut}
             <div onClick={signIn} className="link cursor-pointer">
               <p className="hover:underline">
-                {session ? `Hello, ${session?.user?.name}` : "Sign In"}
+                {session ? `Hello, ${session?.data?.user?.name}` : "Sign In"}
               </p>
+              {console.log("session",session)}
               <p className="font-extrabold md:text-sm">Account & Lists</p>
             </div>
             <div
