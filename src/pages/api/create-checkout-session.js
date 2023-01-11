@@ -7,13 +7,13 @@ export default async (req, res) => {
   //   console.log(email);
 
   const transformedItems = items.map((item) => ({
-    description: item.description,
     quantity: 1,
     price_data: {
       currency: "gbp",
       unit_amount: item.price * 100,
       product_data: {
         name: item.title,
+        description: item.description,
         images: [item.image],
       },
     },
